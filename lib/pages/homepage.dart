@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:mero/controllers/application-controller.dart';
-import 'package:mero/controllers/city-controller.dart';
-import 'package:mero/controllers/product-controller.dart';
 import 'package:mero/widgets/grid_list_switcher.dart';
-import 'package:mero/widgets/gridproduct.dart';
 import 'package:mero/widgets/gridproducts.dart';
+import 'package:mero/widgets/listproducts.dart';
 import 'package:mero/widgets/locationcatfilterrow.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -18,9 +15,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class MyHomePageState extends State<MyHomePage> {
-
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,7 +38,7 @@ class MyHomePageState extends State<MyHomePage> {
           LocationCatFilterRow(),
           GridListSwitcher(),
           if(ApplicationController.current_layout.value == 'List')
-            Text("list view")
+            ListProducts()
           else
             GridProducts()
 

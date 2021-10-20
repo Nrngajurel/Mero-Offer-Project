@@ -3,6 +3,7 @@ import 'package:get/get_state_manager/src/rx_flutter/rx_obx_widget.dart';
 import 'package:mero/controllers/application-controller.dart';
 import 'package:mero/widgets/grid_list_switcher.dart';
 import 'package:mero/widgets/gridproducts.dart';
+import 'package:mero/widgets/listproducts.dart';
 import 'package:mero/widgets/locationcatfilterrow.dart';
 
 class CategoryProduct extends StatefulWidget {
@@ -31,7 +32,7 @@ class _CategoryProductState extends State<CategoryProduct> {
           LocationCatFilterRow(),
           GridListSwitcher(),
           if(ApplicationController.current_layout.value == 'List')
-            Text("list view")
+            ListProducts()
           else
             GridProducts()
 

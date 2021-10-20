@@ -7,7 +7,7 @@ class ProductController extends GetxController {
 
   RxList<Product> productData = <Product>[].obs;
   Map productDetails = {}.obs;
-  var loading = true.obs;
+  var loading = false.obs;
   static final imageBaseUrl= "https://merooffer.com/upsize_images/";
   static final imageBaseUrlWithWaterMark = "https://merooffer.com/watermark/";
   int? city_id;

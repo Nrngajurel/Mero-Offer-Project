@@ -14,6 +14,10 @@ class MyApp extends StatelessWidget {
       title: 'Mero Offer',
       theme: ThemeData(
         primarySwatch: Colors.teal,
+        inputDecorationTheme: InputDecorationTheme(
+          border: OutlineInputBorder(),
+          contentPadding: EdgeInsets.symmetric(horizontal: 10),
+        ),
       ),
       home: LayoutOne(),
       // routes: {
